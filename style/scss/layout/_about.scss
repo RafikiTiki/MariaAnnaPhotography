@@ -1,0 +1,12 @@
+.about {
+    text-align: center;
+    // padding-top: 140px;
+    &__text {
+        font-family: 'Raleway', sans-serif;
+        font-size: 14px;
+        color: #848282;
+        line-height: 26px;
+        width: 62%;
+        margin: 0 auto;
+    }
+}

@@ -17,6 +17,22 @@ a {
     text-align: center;
 }
 
+h2:not(.header__name) {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    color: #5a5957;
+    text-transform: uppercase;
+    margin-top: 135px;
+    &:after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 3px;
+        background-color: #d07c7c;
+        margin: 20px auto 40px auto;
+    }
+}
+
 @import "header";
 @import "menu";
 @import "about";

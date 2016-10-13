@@ -109,7 +109,7 @@
             display: none;
         }
         &__list {
-            display: block;
+            display: block !important;  // shame but after hidding menu in mobile it gets inline style "display: none", so it's the simplest way to override it
             border-top: none;
             flex-basis: auto;
             &__item {
