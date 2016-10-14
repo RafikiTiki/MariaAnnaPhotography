@@ -7,8 +7,6 @@
     <title>Maria Anna Photography</title>
     <link rel="stylesheet" href="./style/main.css">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Playfair+Display:400,700|Raleway:300,400,700" rel="stylesheet">
-    <script src="./js/vendor/jquery-3.1.1.min.js"></script>
-    <script src="./js/app.js"></script>
 </head>
 <body>
     <header id="home">
@@ -43,7 +41,40 @@
         </div>
     </section>
 
-    
+    <!-- section#works>.container.works>.works__left>()+.works__right> -->
+    <section id="works">
+        <div class="works container container--center-text">
+            <h2 class="works__title">works</h2>
+            <div class="temporary-block"></div>
+            <button class="works__load-more-btn">load more</button>
+        </div>
+    </section>
 
+    <section id="testimonials">
+        <div class="testimonials container container--center-text">
+            <h2 class="testimonials__title">see the world through my lens</h2>
+            <div class="my-slider testimonials__slider">
+                <ul>
+                    <li class="testimonials__item">
+                        <p class="testimonials__item__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                        <p class="testimonials__item__author">John Doe CEO at Unknown</p>
+                    </li>
+                    <li class="testimonials__item">
+                        <p class="testimonials__item__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                        <p class="testimonials__item__author">John Doe CEO at Unknown</p>
+                    </li>
+                    <li class="testimonials__item">
+                        <p class="testimonials__item__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                        <p class="testimonials__item__author">John Doe CEO at Unknown</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCRIPTS  -->
+    <script src="./js/vendor/jquery-3.1.1.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/vendor/unslider.min.js"></script>
 </body>
 </html>
