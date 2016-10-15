@@ -10,7 +10,7 @@ $(document).ready(function(){
 
     // events handling menu on mobile
     var menuBurger = $(".menu__burger");
-    
+
     $("body").on("click", function(e) {
         var bool1 = menuBurger.hasClass("open");
         var bool2 = !menuBurger.next().is(e.target);                                        // menu is not a target of an event
@@ -33,5 +33,50 @@ $(document).ready(function(){
         autoplay: true,
         delay: 4500,
         arrows: false
+    });
+
+    // smooth scroll
+    $(function() {
+        $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    // this fixes smooth scroll when #nav menu is fixed
+                    var stickyMenuModifier;
+                    (target.attr("id") === "home" || target.attr("id") === "nav") ? stickyMenuModifier = 0 : stickyMenuModifier = menuHeight;
+                    // close mobile menu on scroll
+                    // console.log(target.attr("id"));
+                    // console.log($(target) == $("#home"));
+                    // console.log(target == $("#nav"));
+                    console.log(stickyMenuModifier);
+                    menuBurger.removeClass('open');
+                    menuBurger.next().slideUp();
+                    $('html, body').animate({
+                        scrollTop: (target.offset().top - stickyMenuModifier)
+                    }, 800);
+                    return false;
+                }
+            }
+        });
+    });
+
+    // events that handle making menu fixed
+    var menuContainer = $("#nav");
+    var scrollValueAfterWhichMakeFixed = menuContainer.offset().top;
+    var html = $("html");
+    var menuHeight = menuContainer.height();
+    var headingAfterMenu = $(".about__title");
+    var HeadingMarginMin = headingAfterMenu.css("margin-top");
+    var headingMarginMax = parseInt(headingAfterMenu.css("margin-top")) + menuHeight + "px";
+    // fixing and unfixing menu based on present scroll value
+    $(window).on("scroll", function() {
+        if (html.scrollTop() >= scrollValueAfterWhichMakeFixed) {
+            menuContainer.addClass("nav--fixed");
+            headingAfterMenu.css("margin-top", headingMarginMax);
+        } else {
+            menuContainer.removeClass("nav--fixed");
+            headingAfterMenu.css("margin-top", HeadingMarginMin);
+        }
     });
 });

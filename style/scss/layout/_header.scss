@@ -7,8 +7,8 @@
     flex-direction: column;
     justify-content: center;
 
-    &:after {
-        content: "";
+    .scroll-arrow {
+        // content: "";
         position: absolute;
         left: 0;
         right: 0;
