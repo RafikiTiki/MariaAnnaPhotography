@@ -1,7 +1,8 @@
 .social {
     &__list {
         list-style: none;
-        margin: 63px auto 135px auto;
+        margin: 63px auto 0 auto;
+        padding-bottom: 135px;
         // margin-bottom: 135px;
         &__item {
             position: relative;

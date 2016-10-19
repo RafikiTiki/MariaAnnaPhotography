@@ -15,8 +15,8 @@
             <h2 class="header__name">MariaAnna<span class="header__name--small">photography</span></h2>
             <h1 class="header__title">See the world through my lens</h1>
             <p class="header__description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+            <a class="scroll-arrow" href="#nav"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
         </div>
-        <a class="scroll-arrow" href="#nav"></a>
     </header>
 
     <nav id="nav">
@@ -48,7 +48,7 @@
         <div class="works container container--center-text">
             <h2 class="works__title">works</h2>
             <div class="temporary-block"></div>
-            <button class="works__load-more-btn">load more</button>
+            <button class="works__load-more-btn btn">load more</button>
         </div>
     </section>
 
@@ -99,6 +99,32 @@
             </ul>
         </div>
     </section>
+
+    <section id="contact">
+        <div class="contact container container--center-text">
+            <h2 class="contact__title">Contact me</h2>
+            <p class="contact__subtitle">Claritas est etiam processus dynamicus qui sequitur</p>
+            <form action="" class="contact__form">
+                <input type="text" class="contact__form__input contact__form__input--name" placeholder="Your Name*">
+                <input type="email" class="contact__form__input contact__form__input--mail" placeholder="Your e-mail addres*">
+                <textarea name="" id="" cols="30" rows="10" class="contact__form__input contact__form__input--message" placeholder="Your Message"></textarea>
+                <footer class="contact__form__footer">
+                    <p class="contact__form__footer__reminder">All fields marked with an asterix (*) are required</p>
+                    <button class="contact__form__footer__submit-btn btn">send</button>
+                </footer>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer container container--center-text">
+            <a href="#home" class="footer__go-home">
+                <img src="./img/caret-up.png" alt="">
+                <p class="footer__go-home__name">MariaAnna<span class="footer__go-home__name--small">photography</span></p>
+            </a>
+            <p class="footer__copyright">&copy Copyright 2014 MariaAnna</p>
+        </div>
+    </footer>
 
     <!-- SCRIPTS  -->
     <script src="./js/vendor/jquery-3.1.1.min.js"></script>

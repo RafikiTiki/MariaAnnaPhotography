@@ -33,6 +33,18 @@ h2:not(.header__name) {
     }
 }
 
+.btn {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #d07c7c;
+    line-height: 50px;
+    border: none;
+}
+
 @import "header";
 @import "menu";
 @import "about";

@@ -52,6 +52,10 @@ $(document).ready(function(){
                     if (menuBurger.is(":visible") && !menuContainer.hasClass("nav--fixed") && stickyMenuModifier) {
                         stickyMenuModifier += menuContainer.find(".menu__list").height();
                     }
+                    // TODO: fix this in CSS (need to substract value of padding-top property of .contact__title)
+                    if (target.attr("id") === "contact") {
+                        stickyMenuModifier -= 75;
+                    }
                     // close menu on mobile
                     menuBurger.removeClass('open');
                     menuBurger.next().slideUp();
@@ -83,5 +87,9 @@ $(document).ready(function(){
             menuContainer.removeClass("nav--fixed");
             headingAfterMenu.css("margin-top", HeadingMarginMin);
         }
+    });
+
+    $(".btn").on("click", function(e) {
+        e.preventDefault();
     });
 });

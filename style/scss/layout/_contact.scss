@@ -1,0 +1,83 @@
+.contact {
+    position: relative;
+    margin-bottom: 25px;
+    &:after {
+        content: "";
+        background: url("../img/contact-bg.jpg") no-repeat center center/cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0.1;
+        z-index: -1;
+    }
+    &__title {
+        padding-top: 75px;
+        margin-top: 0!important; //shame but smoething's messed up, need to rapair it later
+    }
+    &__subtitle {
+        font-family: "Raleway", sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        color: #848282;
+    }
+    &__form {
+        margin: 55px auto 0 auto;
+        padding-bottom: 120px;
+        width: 80%;
+        font-family: "Raleway", sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        color: #848282;
+        &__input {
+            height: 50px;
+            display: block;
+            width: 100%;
+            padding-left: 30px;
+            border: 1px solid #d07c7c;
+            font-family: "Raleway", sans-serif;
+            &:nth-of-type(2) {
+                margin: 16px 0;
+            }
+            &--message {
+                padding-top: 20px;
+                margin-bottom: 32px;
+                min-height: 140px;
+                resize: vertical;
+            }
+        }
+        &__footer {
+            width: 100%;
+            &__reminder {
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 18px;
+            }
+            &__submit-btn {
+                text-align: center;
+                width: 145px;
+                margin-top: 30px;
+            }
+        }
+
+        @media all and (min-width: 768px) {
+            & {
+                width: 585px;
+
+                &__footer {
+                    line-height: 50px;
+                    text-align: left;
+                    &__reminder {
+                        display: inline-block;
+                        padding-left: 30px;
+                    }
+                    &__submit-btn {
+                        float: right;
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
