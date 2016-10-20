@@ -1,21 +1,134 @@
-#works {
-    width: 100%;
-    // height: 1280px;
-}
-
-.temporary-block {
-    height: 1280px;
-    background: #aaa;
-
-
-}
-
 .works {
-
+    &-line {
+        width: 80%;
+        height: 2px;
+        margin: 0 auto;
+        background-color: #fff;
+    }
+    &__wrapper {
+        width: calc(100% - 50px);
+        margin:  0  auto;
+        &__row {
+            width: 100%;
+            margin-bottom: 25px;
+            &__col {
+                &__figure {
+                    position: relative;
+                    cursor: pointer;
+                    margin: 10px 0;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: #000;
+                        opacity: 0;
+                        transition: opacity .5s ease-in-out;
+                    }
+                    img {
+                        width: 100%;
+                    }
+                    &__caption {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        min-width: 205px;
+                        line-height: 31px;
+                        color: #fff;
+                        z-index: 999;
+                        &__upper {
+                            position: relative;
+                            font-family: 'Playfair Display', serif;
+                            font-size: 25px;
+                            font-weight: 300;
+                            line-height: 45px;
+                            text-transform: uppercase;
+                            padding: 0 25px;
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 22px;
+                                height: 22px;
+                                border-top: 2px solid #fff;
+                                border-left: 2px solid #fff;
+                                transition: all .5s ease-in-out;
+                            }
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                width: 22px;
+                                height: 22px;
+                                border-top: 2px solid #fff;
+                                border-right: 2px solid #fff;
+                                transition: all .5s ease-in-out;
+                            }
+                        }
+                        &__lower {
+                            position: relative;
+                            font-family: "Raleway", sans-serif;
+                            font-size: 16px;
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 22px;
+                                height: 22px;
+                                border-left: 2px solid #fff;
+                                border-bottom: 2px solid #fff;
+                                transition: all .5s ease-in-out;
+                            }
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                                width: 22px;
+                                height: 22px;
+                                border-right: 2px solid #fff;
+                                border-bottom: 2px solid #fff;
+                                transition: all .5s ease-in-out;
+                            }
+                        }
+                    }
+                    &:hover {
+                        &:before {
+                            opacity: 0.6;
+                        }
+                        & .works__wrapper__row__col__figure__caption__upper {
+                            &:before {
+                                top: -10px;
+                                left: -10px;
+                            }
+                            &:after {
+                                top: -10px;
+                                right: -10px;
+                            }
+                        }
+                        & .works__wrapper__row__col__figure__caption__lower {
+                            &:before {
+                                bottom: -10px;
+                                left: -10px;
+                            }
+                            &:after {
+                                bottom: -10px;
+                                right: -10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     &__load-more-btn {
         margin-top: 80px;
         width: 200px;
     }
 }
-
-// all code in this file is demonstrative
