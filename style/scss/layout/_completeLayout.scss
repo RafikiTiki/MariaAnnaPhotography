@@ -34,6 +34,7 @@ h2:not(.header__name) {
 }
 
 .btn {
+    position: relative;
     text-align: center;
     text-transform: uppercase;
     font-family: "Raleway", sans-serif;
@@ -43,6 +44,25 @@ h2:not(.header__name) {
     background-color: #d07c7c;
     line-height: 50px;
     border: none;
+    cursor: pointer;
+    transition: background-color .2s;
+    // &:before {
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     opacity: 0;
+    //     background-color: #fff;
+    //     transition: all .2s;
+    // }
+    &:hover {
+        background-color: #eb8a8a;
+    }
+    &:active, &:focus {
+        background-color: #d47272;
+    }
 }
 
 @import "header";

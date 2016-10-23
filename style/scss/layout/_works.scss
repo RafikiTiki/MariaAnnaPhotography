@@ -10,14 +10,14 @@
         margin:  0  auto;
         &__row {
             width: 100%;
-            margin-bottom: 20px;
             &__col {
                 &__figure {
                     position: relative;
                     cursor: pointer;
                     margin: 10px 0;
                     overflow: hidden;
-                    display: inline-block;
+                    // display: inline-block;
+                    width: 100%;
                     &:before {
                         content: "";
                         position: absolute;
@@ -40,7 +40,6 @@
                         min-width: 205px;
                         line-height: 31px;
                         color: #fff;
-                        z-index: 999;
                         &__upper {
                             position: relative;
                             font-family: 'Playfair Display', serif;
@@ -158,6 +157,9 @@
             width: 100%;
             &__row {
                 max-height: 758px;
+                &:first-child {
+                    margin-bottom: 20px;
+                }
                 &:before, &:after {
                     content: "";
                     display: table;
@@ -174,6 +176,14 @@
                         width: 35.5%;
                         float: left;
                         margin-left: 3%;
+                    }
+                    &__figure {
+                        &--big {
+                            margin: 0;
+                        }
+                        &--small {
+                            margin-top: 20px;
+                        }
                     }
                 }
 

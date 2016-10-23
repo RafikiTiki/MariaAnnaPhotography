@@ -61,7 +61,7 @@ $(document).ready(function(){
                     menuBurger.next().slideUp();
                     $('html, body').animate({
                         scrollTop: (target.offset().top - stickyMenuModifier)
-                    }, 800);
+                    }, 800, "easeInOutCubic");
                     return false;
                 }
             }
